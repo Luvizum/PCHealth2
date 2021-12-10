@@ -1,0 +1,18 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.Net.NetworkInformation.Ping ping =
+            new System.Net.NetworkInformation.Ping();
+            System.Net.NetworkInformation.PingReply pingReply = ping.Send("subjectstudio.online");
+            Console.WriteLine(pingReply.RoundtripTime); //время ответа
+            Console.WriteLine(pingReply.Status);        //статус
+            Console.WriteLine(pingReply.Address);       //IP
+            Console.ReadKey(true);
+        }
+    }
+}
